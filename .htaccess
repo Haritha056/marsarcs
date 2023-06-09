@@ -1,0 +1,12 @@
+RewriteEngine on 
+RewriteRule ^Home index.html
+RewriteRule ^About about.html
+RewriteRule ^Enforcement enforcement.html
+RewriteRule ^NPA npa.html
+RewriteRule ^Recovery recovery.html
+RewriteRule ^Contact contact.html
+
+
+ErrorDocument 404 /error-404
+RewriteCond %{REQUEST_URI} ^/404/$
+RewriteRule ^(.*)$ /error.php [L]
